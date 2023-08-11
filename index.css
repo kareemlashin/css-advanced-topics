@@ -1,0 +1,180 @@
+/* Reset Vs Normalize
+-------------------------------------------------- */
+/* 
+* Reset CSS:
+* CSS resets aim to remove all built-in browser styling
+ . For example margins, paddings, font-sizes of all elements are reset to be the same.
+* Normalize CSS: 
+* Normalize CSS aims to make built-in browser styling consistent across browsers.
+ It also corrects bugs for common browser dependencies.
+*/
+/* End of Reset Vs Normalize
+-------------------------------------------------- */
+/* flex vs grid
+-------------------------------------------------- */
+/*
+* flex [https://css-tricks.com/snippets/css/a-guide-to-flexbox/]
+** One – Dimensional
+** Content First
+* grid
+** two-dimensional layout
+** Layout First
+*/
+/* align-content vs align-items  */
+/*
+* align-items : lex-wrap not required
+*/
+.container{
+    display: flex;
+    flex-direction: column;
+    flex-direction: row ;
+    flex-wrap:  wrap-reverse;
+    flex-wrap: wrap ;
+    flex-wrap: nowrap;
+    /* align-self: flex-start | flex-end | center | stretch ; */
+    /* justify-content: flex-start | flex-end | center | space-between | space-around */
+    /* justify-self: start | end | center | stretch */
+    gap: 10px;
+
+    row-gap: 10px;
+    column-gap: 20px;
+  
+  }
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+/* End of flex vs grid
+-------------------------------------------------- */
+/* 
+* 576px
+* sm -> greater than 576px
+* md -> greater than 768px
+* lg ->  greater than 992px
+* xl ->  greater than 1200px
+*/
+/*
+* Pseudo-elements:
+::before
+::after
+::first-letter
+::first-line
+::selection
+*/
+/* 
+The single colon : refers to pseudo-classes
+The double colon :: refers to pseudo-elements
+*/
+/*
+ ! Functional Pseudo-Classes
+*/
+/* :is() */
+/* The matches-any pseudo-class matches any element that matches any of
+the selectors in the list provided. */
+
+/* :not() */
+/* The negation, or matches-none, pseudo-class represents any element 
+that is not represented by its argument. */
+
+/* :where() */
+/* The specificity-adjustment pseudo-class matches any element that
+matches any of the selectors in the list provided without adding any 
+specificity weight. */
+
+/* :has() */
+/* The relational pseudo-class represents an element if any of the 
+relative selectors match when anchored against the attached element. */
+/*
+* Pseudo-classes:
+* :invalid
+* :active 
+* :focus
+* :target 
+* :visited 
+* :checked
+* :first-child 
+* :last-child
+* :first-of-type
+* :last-of-type
+* :nth-child()
+* :nth-of-type()
+* :only-of-type 
+* :empty
+*/
+
+/* 
+table	Behaves like the <table> element
+table-row	Behaves like the <tr> element
+table-cell	Behaves like the <td> element
+list-item	Behaves like a <li> element which allows it to define list-style-type and list-style-position
+*/
+
+/* Box Model */
+/* 
+Content The content of the box, where text and images appear
+
+Padding A transparent area surrounding the content (i.e., the amount of space between the border and the content)
+
+Border A border surrounding the padding (if any) and content
+
+Margin A transparent area surrounding the border (i.e., the amount of space between the border and any neighboring elements)
+*/
+* {} /* the star symbol will target every single element on the page */
+p {} /* all occurrances of a particular tag */
+ul li {} /* nested elements (descendants) */
+ul > li {} /* direct (immediate) children */
+ul#menu {} /* tags with a particular (unique) id */
+p.hightligh {} /* tags with a particular (not necessarily unique) class */
+h4, p.highlight {} /* grouping */
+ul + p {} /* the adjacent selector will target only the first p after each ul */
+ul ~ p {} /* any p elements, as long as they follow an ul (not necessarily immediate siblings) */
+
+a[title] {} /* this will only select the anchor tags that have a title attribute */
+a[href="http://google.com"] {} /* this will style all anchor tags which link to Google */
+a[href*="google"] {} /* this covers mail.google.com as well as google.co.nz */
+a[href^="http"] {} /* the caret symbol designates the beginning of a string... ever wonder how some websites are able to display a little icon next to the links which are external? */
+a[href$=".jpg"] {} /* we use the dollar symbol to refer to the end of a string */
+a[data-filetype="image"] {} /* target html elements with that data attribute */
+a[data-info~="external"] {} /* target an attribute which has a space-separated list of values */
+input[type=radio]:checked {} /* target all checked radio buttons */
+
+p::first-line {}
+p::first-letter {}
+li:first-child, li:last-child {}
+li:nth-child(3) {} /* NOT zero based! */
+li:nth-child(even) {}
+li:nth-child(3n) {} /* target all elements whose index is a multiple of 3 */
+li:only-child {} /* target elements which are the only child of its parent */
+
+
+/* 
+a[href^="https"]
+a[href$=".pdf"]
+a[href*="css"]
+*/
+
+.class{
+       -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+       -ms-border-radius: 5px;
+       border-radius: 5px;
+       -o-border-radius: 5px;
+}
+/* Float is a CSS positioning property */
+.clearfix:after {
+    content: " ";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+  }
+  /* media
+screen: Suitable for a projector.
+braille: Suitable for braille tactile feedback devices.
+print: Suitable for show print preview before printing.
+tv: Provides connection with television devices with color, sound, low resolution, and small scroll area.
+screen: it helps to color computer display screen like PC screen or Laptop screen.
+
+
+  */
